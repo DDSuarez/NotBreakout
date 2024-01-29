@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://drot2tqhbn664"]
+
+[ext_resource type="Script" path="res://src/scripts/end_screen.gd" id="1_tfd3x"]
+
+[node name="EndScreen" type="CanvasLayer"]
+script = ExtResource("1_tfd3x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 720.0
+offset_bottom = 1280.0
+color = Color(0.27451, 0.654902, 0.227451, 1)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 296.0
+offset_top = 192.0
+offset_right = 424.0
+offset_bottom = 256.0
+text = "Game over :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 960.0
+offset_right = 424.0
+offset_bottom = 1024.0
+text = "Replay?"
+
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
