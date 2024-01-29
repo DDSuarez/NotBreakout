@@ -14,6 +14,10 @@ func _process(delta):
 
 func _physics_process(delta):
 	var collision = move_and_collide(velocity * SPEED * delta)
+	var collider
 	if collision:
 		$AudioStreamPlayer2D.play()
+		collider = collision.get_collider()
 		velocity = velocity.bounce(collision.get_normal())
+		if collider == $"../../Bricks/Brick":
+			collider.queue_free()
