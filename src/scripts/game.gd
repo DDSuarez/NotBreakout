@@ -18,6 +18,10 @@ func _process(delta):
 	if Globals.lives <= 0:
 		get_tree().change_scene_to_file("res://src/scenes/end_screen.tscn")
 		
+	if $Bricks.get_child_count() == 0:
+		Globals.playerWon = true
+		get_tree().change_scene_to_file("res://src/scenes/end_screen.tscn")
+
 	if $Balls.get_child_count() == 0:
 		spawn_ball()
 		
