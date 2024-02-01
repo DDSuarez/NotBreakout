@@ -24,7 +24,6 @@ color = Color(0, 0.517647, 0.682353, 1)
 position = Vector2(360, 1216)
 
 [node name="Bricks" type="Node2D" parent="."]
-position = Vector2(344, 198)
 
 [node name="Balls" type="Node2D" parent="."]
 position = Vector2(360, 640)
