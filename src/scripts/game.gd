@@ -18,19 +18,26 @@ func _process(delta):
 	if Globals.lives <= 0:
 		get_tree().change_scene_to_file("res://src/scenes/end_screen.tscn")
 		
+	# if all the bricks have been destroyed, game won
 	if $Bricks.get_child_count() == 0:
 		Globals.playerWon = true
 		get_tree().change_scene_to_file("res://src/scenes/end_screen.tscn")
 
+	# spawn a ball if no balls in play
 	if $Balls.get_child_count() == 0:
 		spawn_ball()
 		
-		
+
+# spawn a ball in the middle of the screen
 func spawn_ball():
 	var ballInstance = ballScene.instantiate()
+	ballInstance.position.x = 360
+	ballInstance.position.y = 640
 	$Balls.add_child(ballInstance, true)
 
 
+# spawn a brick underneath the Bricks 2D Node with the name given
+# once this Bricks node is empty, we know the game is over
 func spawn_brick(x, y, name):
 	var brickInstance = brickScene.instantiate()
 	brickInstance.position = Vector2(x, y)
@@ -38,6 +45,9 @@ func spawn_brick(x, y, name):
 	$Bricks.add_child(brickInstance)
 	
 
+# build a basic map of bricks
+# each brick added to the Bricks 2D Node with name of Brick#
+# then in the ball script, we check if the collider matches "Brick#" and remove it
 func build_map():
 	var offset_y = 20
 	
@@ -50,6 +60,8 @@ func build_map():
 	for n in 5:
 		spawn_brick((n * 128) + 32, offset_y + ((brick_y / 2) * 2), "Brick" + str(n + 9))
 
+
+# update lives counter if ball enters the bottom of play area
 func _on_bottom_body_entered(body):
 	Globals.lives -= 1
 	$LivesCounter.set_text("Lives: " + str(Globals.lives))

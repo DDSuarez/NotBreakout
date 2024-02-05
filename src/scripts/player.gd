@@ -17,4 +17,5 @@ func _process(delta):
 	elif Input.is_action_pressed("m_right"):
 		position.x += SPEED
 
+	# make sure paddle doesn't leave the screen
 	position.x = clampi(position.x, paddle_size.x / 2, screen_size.x - paddle_size.x / 2)
