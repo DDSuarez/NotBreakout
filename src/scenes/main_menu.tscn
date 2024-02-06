@@ -47,5 +47,5 @@ text = "Play w/ Mouse"
 position = Vector2(688, 32)
 texture = ExtResource("2_hrhsd")
 
-[connection signal="pressed" from="PlayKeeb" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PlayKeeb" to="." method="_on_play_keeb_pressed"]
 [connection signal="pressed" from="PlayMouse" to="." method="_on_play_mouse_pressed"]

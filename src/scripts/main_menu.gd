@@ -11,12 +11,11 @@ func _process(delta):
 	pass
 
 
-# start the game
-func _on_play_button_pressed():
-	Globals.currControls = Globals.CONTROLS.KEEB
+func _on_play_mouse_pressed():
+	Globals.currControls = Globals.CONTROLS.MOUSE
 	get_tree().change_scene_to_file("res://src/scenes/game.tscn")
 
 
-func _on_play_mouse_pressed():
-	Globals.currControls = Globals.CONTROLS.MOUSE
+func _on_play_keeb_pressed():
+	Globals.currControls = Globals.CONTROLS.KEEB
 	get_tree().change_scene_to_file("res://src/scenes/game.tscn")

@@ -26,8 +26,13 @@ func _physics_process(delta):
 		# speed up the ball and do a special bounce if ball hits the player
 		# else just do a normal bounce off a wall
 		if collider == $"../../Player":
-			speed += ACCEL
-			bounceBall(collider)
+			# check if the ball collides on the sides of the paddle and stop the ball from going all crazy
+			# 80 is the distance from the middle of the paddle (-64, 64) plus to the middle of the ball (-16, 16)
+			if ((position - collider.position).x > 79 or (position - collider.position).x < -79):
+				velocity = velocity.bounce(collision.get_normal())
+			else:
+				speed += ACCEL
+				bounceBall(collider)
 		else:
 			velocity = velocity.bounce(collision.get_normal())
 			
