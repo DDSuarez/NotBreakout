@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dn54xy8xp34tj"]
+[gd_scene load_steps=7 format=3 uid="uid://dn54xy8xp34tj"]
 
 [ext_resource type="PackedScene" uid="uid://b8qbvbpnexyhh" path="res://src/scenes/player.tscn" id="1_j0pv6"]
 [ext_resource type="Script" path="res://src/scripts/game.gd" id="1_tfe5f"]
+[ext_resource type="Texture2D" uid="uid://dg8b21gvcqx3v" path="res://assets/images/lifesprite.png" id="3_8bx6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_26vwm"]
 size = Vector2(720, 24)
@@ -48,11 +49,30 @@ shape = SubResource("RectangleShape2D_jfulw")
 position = Vector2(360, 1314.75)
 shape = SubResource("RectangleShape2D_l13jg")
 
-[node name="LivesCounter" type="Label" parent="."]
+[node name="Lives" type="Node2D" parent="."]
+position = Vector2(-545, 0)
+
+[node name="Lives" type="Label" parent="Lives"]
 texture_filter = 1
-offset_left = 662.0
-offset_right = 720.0
-offset_bottom = 23.0
-text = "Lives: 3"
+offset_left = 549.0
+offset_top = 1252.0
+offset_right = 601.0
+offset_bottom = 1275.0
+text = "Lives x"
+
+[node name="Lifesprite1" type="Sprite2D" parent="Lives"]
+position = Vector2(622, 1265)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("3_8bx6l")
+
+[node name="Lifesprite2" type="Sprite2D" parent="Lives"]
+position = Vector2(652, 1265)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("3_8bx6l")
+
+[node name="Lifesprite3" type="Sprite2D" parent="Lives"]
+position = Vector2(683, 1265)
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("3_8bx6l")
 
 [connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]

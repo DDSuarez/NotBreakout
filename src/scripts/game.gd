@@ -8,8 +8,6 @@ var brick_y = 128
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$LivesCounter.set_text("Lives: " + str(Globals.lives))
-	
 	build_map()
 	
 
@@ -61,10 +59,15 @@ func build_map():
 		spawn_brick((n * 128) + 32, offset_y + ((brick_y / 2) * 2), "Brick" + str(n + 9))
 
 
-# update lives counter if ball enters the bottom of play area
+# remove a life sprite if a life is lost
 func _on_bottom_body_entered(body):
 	Globals.lives -= 1
-	$LivesCounter.set_text("Lives: " + str(Globals.lives))
+	
+	if Globals.lives == 2:
+		$Lives/Lifesprite3.hide()
+	elif Globals.lives == 1:
+		$Lives/Lifesprite3.hide()
+		$Lives/Lifesprite2.hide()
 	
 	body.queue_free()
 	

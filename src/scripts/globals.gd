@@ -1,6 +1,6 @@
 extends Node
 
-const START_LIVES = 2
+const START_LIVES = 3
 
 var lives : int
 var playerWon : bool
