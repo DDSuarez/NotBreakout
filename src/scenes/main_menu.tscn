@@ -29,15 +29,23 @@ offset_right = 480.0
 offset_bottom = 416.0
 text = "a game by suarez aka metasaval"
 
-[node name="PlayButton" type="Button" parent="."]
-offset_left = 296.0
+[node name="PlayKeeb" type="Button" parent="."]
+offset_left = 160.0
 offset_top = 960.0
-offset_right = 424.0
+offset_right = 288.0
 offset_bottom = 1024.0
-text = "Play!"
+text = "Play w/ Keeb"
+
+[node name="PlayMouse" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 960.0
+offset_right = 544.0
+offset_bottom = 1024.0
+text = "Play w/ Mouse"
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(688, 32)
 texture = ExtResource("2_hrhsd")
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PlayKeeb" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PlayMouse" to="." method="_on_play_mouse_pressed"]
