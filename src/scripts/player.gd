@@ -22,3 +22,4 @@ func _process(delta):
 
 	# make sure paddle doesn't leave the screen
 	position.x = clampi(position.x, paddle_size.x / 2, screen_size.x - paddle_size.x / 2)
+

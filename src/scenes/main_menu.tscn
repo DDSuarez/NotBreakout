@@ -41,7 +41,7 @@ offset_left = 416.0
 offset_top = 960.0
 offset_right = 544.0
 offset_bottom = 1024.0
-text = "Play w/ Mouse"
+text = "Play w/ Mouse or Phone"
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(688, 32)
