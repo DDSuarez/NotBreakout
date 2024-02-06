@@ -17,4 +17,4 @@ func _process(delta):
 func _on_replay_button_pressed():
 	Globals.playerWon = false
 	Globals.lives = Globals.START_LIVES
-	get_tree().change_scene_to_file("res://src/scenes/game.tscn")
+	get_tree().change_scene_to_file("res://src/scenes/main_menu.tscn")

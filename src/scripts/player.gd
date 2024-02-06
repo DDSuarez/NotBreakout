@@ -12,9 +12,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("m_left"):
-		position.x -= SPEED
-	elif Input.is_action_pressed("m_right"):
-		position.x += SPEED
+	if (Globals.currControls == Globals.CONTROLS.KEEB):
+		if Input.is_action_pressed("m_left"):
+			position.x -= SPEED
+		elif Input.is_action_pressed("m_right"):
+			position.x += SPEED
+	elif (Globals.currControls == Globals.CONTROLS.MOUSE):
+		position.x = get_viewport().get_mouse_position().x
 
+	# make sure paddle doesn't leave the screen
 	position.x = clampi(position.x, paddle_size.x / 2, screen_size.x - paddle_size.x / 2)

@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Breakout"
-run/main_scene="res://src/scenes/game.tscn"
+config/name="!Breakout"
+config/description="it's not breakouts"
+run/main_scene="res://src/scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/images/logo.png"
 
 [autoload]
 

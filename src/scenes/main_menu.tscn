@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvgu8u1pkw0m"]
+[gd_scene load_steps=3 format=3 uid="uid://dvgu8u1pkw0m"]
 
 [ext_resource type="Script" path="res://src/scripts/main_menu.gd" id="1_kjtx7"]
+[ext_resource type="Texture2D" uid="uid://6pkhknpqg3pr" path="res://assets/images/logo.png" id="2_hrhsd"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_kjtx7")
@@ -16,7 +17,7 @@ offset_left = 200.0
 offset_top = 248.0
 offset_right = 504.0
 offset_bottom = 385.0
-text = "it's breakout"
+text = "it's not breakout"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -28,11 +29,23 @@ offset_right = 480.0
 offset_bottom = 416.0
 text = "a game by suarez aka metasaval"
 
-[node name="PlayButton" type="Button" parent="."]
-offset_left = 296.0
+[node name="PlayKeeb" type="Button" parent="."]
+offset_left = 160.0
 offset_top = 960.0
-offset_right = 424.0
+offset_right = 288.0
 offset_bottom = 1024.0
-text = "Play!"
+text = "Play w/ Keeb"
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[node name="PlayMouse" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 960.0
+offset_right = 544.0
+offset_bottom = 1024.0
+text = "Play w/ Mouse"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(688, 32)
+texture = ExtResource("2_hrhsd")
+
+[connection signal="pressed" from="PlayKeeb" to="." method="_on_play_keeb_pressed"]
+[connection signal="pressed" from="PlayMouse" to="." method="_on_play_mouse_pressed"]
