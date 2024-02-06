@@ -9,6 +9,7 @@ var brick_y = 128
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	build_map()
+	$BallTimer.start()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,8 +23,8 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://src/scenes/end_screen.tscn")
 
 	# spawn a ball if no balls in play
-	if $Balls.get_child_count() == 0:
-		spawn_ball()
+	#if $Balls.get_child_count() == 0:
+	#	spawn_ball()
 		
 
 # spawn a ball in the middle of the screen
@@ -71,3 +72,9 @@ func _on_bottom_body_entered(body):
 	
 	body.queue_free()
 	
+	$BallTimer.start()
+	
+
+
+func _on_ball_timer_timeout():
+	spawn_ball()
