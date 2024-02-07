@@ -18,7 +18,7 @@ You get three lives. Good luck!
 
 Credits
 -
-Made in the Godot Engine v4.2: https://godotengine.org/
+Made in Godot Engine v4.2: https://godotengine.org/
 
 Used Pixelorama to make the brick sprite and icon: https://orama-interactive.itch.io/pixelorama
 
