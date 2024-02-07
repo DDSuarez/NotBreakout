@@ -21,3 +21,6 @@ bin/
 
 # Build templates
 android/
+
+# Media for sharing
+press/

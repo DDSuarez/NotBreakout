@@ -1,6 +1,6 @@
 **it's not breakout**
 -
-Eventually playable in browser at https://metasaval.itch.io/its-not-breakout
+Playable in browser at https://metasaval.itch.io/not-breakout
 
 Game two of my 20 games challenge:
 https://20_games_challenge.gitlab.io/
@@ -9,7 +9,9 @@ Da Rules
 -
 If using Keeb: W/D or Left/Right
 
-If using Mouse: self-explanatory
+If using Mouse: move paddle with mouse
+
+If using Phone: move paddle with finger/thumb
 
 You get three lives. Good luck!
 
