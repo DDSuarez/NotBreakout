@@ -7,7 +7,7 @@ https://20_games_challenge.gitlab.io/
 
 Da Rules
 -
-If using Keeb: W/D or Left/Right
+If using Keeb: A/D or Left/Right
 
 If using Mouse: move paddle with mouse
 
