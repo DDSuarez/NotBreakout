@@ -18,3 +18,9 @@ data_*/
 
 # Binaries
 bin/
+
+# Build templates
+android/
+
+# Media for sharing
+press/

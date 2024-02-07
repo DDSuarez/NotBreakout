@@ -17,6 +17,7 @@ offset_left = 200.0
 offset_top = 248.0
 offset_right = 504.0
 offset_bottom = 385.0
+theme_override_font_sizes/font_size = 20
 text = "it's not breakout"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -30,18 +31,20 @@ offset_bottom = 416.0
 text = "a game by suarez aka metasaval"
 
 [node name="PlayKeeb" type="Button" parent="."]
-offset_left = 160.0
-offset_top = 960.0
-offset_right = 288.0
-offset_bottom = 1024.0
-text = "Play w/ Keeb"
+offset_left = 72.0
+offset_top = 896.0
+offset_right = 328.0
+offset_bottom = 960.0
+theme_override_font_sizes/font_size = 20
+text = "Play w/ Keyboard"
 
 [node name="PlayMouse" type="Button" parent="."]
-offset_left = 416.0
-offset_top = 960.0
-offset_right = 544.0
-offset_bottom = 1024.0
-text = "Play w/ Mouse"
+offset_left = 392.0
+offset_top = 896.0
+offset_right = 648.0
+offset_bottom = 960.0
+theme_override_font_sizes/font_size = 20
+text = "Play w/ Mouse or Phone"
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(688, 32)
